@@ -20,13 +20,7 @@
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md"
   ],
-  "size-limit": [
-    {
-      "path": "build/static/js/*.js"
-    }
-  ],
   "scripts": {
-    "install": "node",
     "build-bundle": "yarn run build:final",
     "build-notsourcemap": "GENERATE_SOURCEMAP=false yarn run build",
     "build:final": "BUILD_NO_CHUNKS=true yarn run build",

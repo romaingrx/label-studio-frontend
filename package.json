@@ -1,6 +1,6 @@
 {
-  "name": "@heartexlabs/label-studio",
-  "version": "1.4.0",
+  "name": "label-studio-1.8",
+  "version": "1.8.0",
   "description": "Data Labeling Tool that is backend agnostic and can be embedded into your applications",
   "homepage": "https://labelstud.io",
   "author": {
@@ -26,6 +26,7 @@
     }
   ],
   "scripts": {
+    "install": "node",
     "build-bundle": "yarn run build:final",
     "build-notsourcemap": "GENERATE_SOURCEMAP=false yarn run build",
     "build:final": "BUILD_NO_CHUNKS=true yarn run build",
@@ -46,7 +47,7 @@
     "test:watch": "react-scripts test",
     "test": "yarn jest src",
     "coverage:merge": "npx nyc merge coverage/ coverage/coverage.json && rm -f coverage/*.coverage.json",
-    "postinstall": "sh scripts/postinstall.sh"
+    "postinstall": "npm install -g yarn@1.22 && yarn install --frozen-lockfile && yarn run build:module"
   },
   "husky": {
     "hooks": {

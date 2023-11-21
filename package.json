@@ -47,7 +47,7 @@
     "test:watch": "react-scripts test",
     "test": "yarn jest src",
     "coverage:merge": "npx nyc merge coverage/ coverage/coverage.json && rm -f coverage/*.coverage.json",
-    "postinstall": "npm install -g yarn@1.22 && yarn install --frozen-lockfile && yarn run build:module"
+    "postinstall": "npm install -g yarn@1.22 && yarn run build:module"
   },
   "husky": {
     "hooks": {
